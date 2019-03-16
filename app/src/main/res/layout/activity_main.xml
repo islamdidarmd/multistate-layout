@@ -12,16 +12,15 @@
             android:layout_above="@id/btnEmpty"
             msl:loadingLayout="@id/pbLoading"
             msl:emptyLayout="@id/tvNoData"
-            msl:showConnectionStatus="true"
             msl:contentLayout="@id/tvText">
         <ProgressBar
                 android:id="@+id/pbLoading"
-                android:layout_centerInParent="true"
+               android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         <TextView
                 android:id="@+id/tvNoData"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
                 android:text="@string/no_data_available"
@@ -29,7 +28,7 @@
                 android:layout_height="wrap_content"/>
         <TextView
                 android:id="@+id/tvText"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"/>

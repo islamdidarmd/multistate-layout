@@ -29,7 +29,7 @@ open class MultiStateLayout @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) :
-    RelativeLayout(context, attrs, defStyleAttr) {
+    FrameLayout(context, attrs, defStyleAttr) {
 
     val TAG = this.javaClass.name
 
@@ -60,21 +60,13 @@ open class MultiStateLayout @JvmOverloads constructor(
             this.emptyLayout = findViewById(emptyId)
             this.loadingLayout = findViewById(loadingId)
             this.contentLayout = findViewById(contentId)
-            this.netWorkStatusLayout = View.inflate(context, R.layout.layout_connectivity, this)
-
-           // setUpNetworkstatusLayout()
+           // this.netWorkStatusLayout = View.inflate(context, R.layout.layout_connectivity, this)
 
             setState(State.CONTENT)
             initNetworkReceiver()
 
             array.recycle()
         }
-    }
-
-    fun setUpNetworkstatusLayout() {
-        val params = layoutParams as RelativeLayout.LayoutParams
-        params.addRule(RelativeLayout.BELOW, netWorkStatusLayout!!.id)
-        layoutParams = params
     }
 
     fun isOnline(context: Context): Boolean {
