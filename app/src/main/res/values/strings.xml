@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Multistate Layout Sample</string>
+    <string name="toggle_state">Toggle State</string>
+    <string name="show_empty">Show Empty</string>
+    <string name="show_content">Show Content</string>
+    <string name="show_loading">Show Loading</string>
+</resources>

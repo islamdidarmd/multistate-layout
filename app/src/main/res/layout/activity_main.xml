@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:msl="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.islamdidarmd.multistatelayout.MultiStateLayout
+            android:layout_width="match_parent"
+            android:id="@+id/multiStateLayout"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnEmpty"
+            msl:loadingLayout="@id/pbLoading"
+            msl:emptyLayout="@id/tvNoData"
+            msl:showConnectionStatus="true"
+            msl:contentLayout="@id/tvText">
+        <ProgressBar
+                android:id="@+id/pbLoading"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/tvNoData"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:text="@string/no_data_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/tvText"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!"/>
+
+    </com.islamdidarmd.multistatelayout.MultiStateLayout>
+
+    <Button
+            android:layout_marginTop="32dp"
+            android:layout_above="@id/btnLoading"
+            android:id="@+id/btnEmpty"
+            android:layout_centerHorizontal="true"
+            android:text="@string/show_empty"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/btnContent"
+            android:id="@+id/btnLoading"
+            android:textAllCaps="false"
+            android:text="@string/show_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:layout_marginBottom="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnContent"
+            android:textAllCaps="false"
+            android:text="@string/show_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

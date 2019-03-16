@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Multistate Layout</string>
+    <string name="no_data_available">No data available</string>
+    <string name="connecting">Not connected</string>
+</resources>
