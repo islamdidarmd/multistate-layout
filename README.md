@@ -2,7 +2,7 @@
 A custom layout that helps to manage multiple states(LOADING, EMPTY, CONTENT) of the layout. This layout is also aware
 about network state.
 
-[![](https://jitpack.io/v/islamdidarmd/multistatelayout.svg)](https://jitpack.io/v/islamdidarmd/multistatelayout)
+[![](https://jitpack.io/v/islamdidarmd/Multistate-Layout.svg)](https://jitpack.io/v/islamdidarmd/multistatelayout)
 
 ## Installation (with Gradle)
 Add the dependency to your root *build.gradle*:
@@ -15,14 +15,14 @@ Add the dependency to your root *build.gradle*:
 Now add this dependency in your module *build.gradle*
 ```groovy
    dependencies {
-         implementation 'com.github.islamdidarmd:multistatelayout:$latest_release'
+         implementation 'com.github.islamdidarmd:Multistate-Layout:$latest_release'
    }
 ```
 
 ### Demo
-  <img src="https://github.com/islamdidarmd/multistatelayout/blob/master/Screenshot-1552992432.png" width="250">
-  <img src="https://github.com/islamdidarmd/multistatelayout/blob/master/Screenshot-1552992440.png" width="250"> 
-  <img src="https://github.com/islamdidarmd/multistatelayout/blob/master/Screenshot-1552992443.png" width="250">
+  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992432.png" width="250">
+  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992440.png" width="250"> 
+  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992443.png" width="250">
 
 ### How to use
 For using custom attributes use `msl` namespace in the root element of the layout
