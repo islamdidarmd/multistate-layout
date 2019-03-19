@@ -20,21 +20,18 @@ Now add this dependency in your module *build.gradle*
 ```
 
 ### Demo
-  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992432.png" width="250"><img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992440.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992443.png" width="250">
+  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992432.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992440.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992443.png" width="250">
 
 ### How to use
 For using custom attributes use `msl` namespace in the root element of the layout
 
-```
-xmlns:msl="http://schemas.android.com/apk/res-auto"
-```
-```
-msl:loadingLayout, msl:emptyLayout are optional. If you don't include these, a basic layout will be shown.
-```
-```
-if you set msl:showConnectionStatus="true", then a layout will be shown on top of the layout if device doesn't have a data
+`xmlns:msl="http://schemas.android.com/apk/res-auto"`
+
+`msl:loadingLayout`, `msl:emptyLayout` are optional. If you don't include these, a basic layout will be shown.
+
+if you set `msl:showConnectionStatus="true"`, then a layout will be shown on top of the layout if device doesn't have a data
 connection
-```
+
 ```xml
  <com.islamdidarmd.multistatelayout.MultiStateLayout
             android:layout_width="match_parent"
@@ -78,7 +75,7 @@ connection
     State.EMPTY,
     State.CONTENT
 ```
-
+### Changing States
 ```kotlin
         btnLoading.setOnClickListener {
             multiStateLayout.setState(MultiStateLayout.State.LOADING)
@@ -94,4 +91,4 @@ connection
 ```
 
 
-For a complete example see the sample app `https://github.com/islamdidarmd/multistatelayout/tree/master/app`
+For a complete example see the sample app `https://github.com/islamdidarmd/Multistate-Layout/tree/master/app`
