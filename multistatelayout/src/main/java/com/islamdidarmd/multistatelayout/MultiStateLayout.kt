@@ -58,9 +58,9 @@ open class MultiStateLayout @JvmOverloads constructor(
             val contentId = array.getResourceId(R.styleable.msl_contentLayout, 0)
             this.networkStatusEnabled = array.getBoolean(R.styleable.msl_showConnectionStatus, false)
 
-            this.emptyLayout = findViewById(emptyId)
-            this.loadingLayout = findViewById(loadingId)
-            this.contentLayout = findViewById(contentId)
+            this.emptyLayout = rootView.findViewById(emptyId)
+            this.loadingLayout = rootView.findViewById(loadingId)
+            this.contentLayout = rootView.findViewById(contentId)
 
             if (this.emptyLayout == null) {
                 this.emptyLayout = LayoutInflater.from(context).inflate(R.layout.layout_no_data, this, false)
