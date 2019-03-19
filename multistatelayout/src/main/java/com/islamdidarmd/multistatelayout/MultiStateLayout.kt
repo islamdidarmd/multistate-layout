@@ -41,6 +41,11 @@ open class MultiStateLayout @JvmOverloads constructor(
     private val array = context.obtainStyledAttributes(attrs, R.styleable.msl, defStyleAttr, 0)
     private var networkStateReceiver: BroadcastReceiver? = null
 
+    override fun onAttachedToWindow() {
+       // this.netWorkStatusLayout = inflate(context, R.layout.layout_connectivity,this)
+        super.onAttachedToWindow()
+    }
+
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         if (networkStateReceiver != null) {
@@ -60,7 +65,7 @@ open class MultiStateLayout @JvmOverloads constructor(
             this.emptyLayout = findViewById(emptyId)
             this.loadingLayout = findViewById(loadingId)
             this.contentLayout = findViewById(contentId)
-           // this.netWorkStatusLayout = View.inflate(context, R.layout.layout_connectivity, this)
+         //   this.netWorkStatusLayout = inflate(context, R.layout.layout_connectivity, this)
 
             setState(State.CONTENT)
             initNetworkReceiver()
