@@ -4,4 +4,5 @@
     <string name="show_empty">Show Empty</string>
     <string name="show_content">Show Content</string>
     <string name="show_loading">Show Loading</string>
+    <string name="loading">Please wait…</string>
 </resources>

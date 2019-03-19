@@ -4,14 +4,13 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.net.NetworkInfo
-import android.net.ConnectivityManager
-import android.util.Log
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 
 
@@ -29,22 +28,19 @@ open class MultiStateLayout @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) :
-    FrameLayout(context, attrs, defStyleAttr) {
+    LinearLayout(context, attrs, defStyleAttr) {
 
     val TAG = this.javaClass.name
 
-    lateinit var emptyLayout: View
-    lateinit var loadingLayout: View
+    var emptyLayout: View? = null
+    var loadingLayout: View? = null
     var contentLayout: View? = null
+
     var netWorkStatusLayout: View? = null
     var networkStatusEnabled = false
+
     private val array = context.obtainStyledAttributes(attrs, R.styleable.msl, defStyleAttr, 0)
     private var networkStateReceiver: BroadcastReceiver? = null
-
-    override fun onAttachedToWindow() {
-       // this.netWorkStatusLayout = inflate(context, R.layout.layout_connectivity,this)
-        super.onAttachedToWindow()
-    }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
@@ -65,13 +61,34 @@ open class MultiStateLayout @JvmOverloads constructor(
             this.emptyLayout = findViewById(emptyId)
             this.loadingLayout = findViewById(loadingId)
             this.contentLayout = findViewById(contentId)
-         //   this.netWorkStatusLayout = inflate(context, R.layout.layout_connectivity, this)
+
+            if (this.emptyLayout == null) {
+                this.emptyLayout = LayoutInflater.from(context).inflate(R.layout.layout_no_data, this, false)
+            }
+            if (this.loadingLayout == null) {
+                this.loadingLayout = LayoutInflater.from(context).inflate(R.layout.layout_loading, this, false)
+            }
+
+            initLayouts()
 
             setState(State.CONTENT)
             initNetworkReceiver()
 
             array.recycle()
         }
+    }
+
+    fun initLayouts() {
+        orientation = VERTICAL
+        this.removeAllViews()
+
+        netWorkStatusLayout = LayoutInflater.from(context).inflate(R.layout.layout_connectivity, this, false)
+
+        addView(netWorkStatusLayout)
+        addView(contentLayout)
+        addView(emptyLayout)
+        addView(loadingLayout)
+
     }
 
     fun isOnline(context: Context): Boolean {

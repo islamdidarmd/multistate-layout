@@ -10,28 +10,61 @@
             android:id="@+id/multiStateLayout"
             android:layout_height="match_parent"
             android:layout_above="@id/btnEmpty"
-            msl:loadingLayout="@id/pbLoading"
-            msl:emptyLayout="@id/tvNoData"
-            msl:contentLayout="@id/tvText">
-        <ProgressBar
-                android:id="@+id/pbLoading"
-               android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/tvNoData"
-                android:layout_gravity="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:text="@string/no_data_available"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/tvText"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello World!"/>
+            msl:contentLayout="@id/content"
+            msl:loadingLayout="@id/layoutLoading"
+            msl:emptyLayout="@id/layoutNoData"
+            msl:showConnectionStatus="true">
+
+        <RelativeLayout
+                android:id="@+id/layoutLoading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ProgressBar
+                    android:id="@+id/pb"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_below="@id/pb"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/layoutNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:text="@string/no_data_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/tvText"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello World!"/>
+        </RelativeLayout>
 
     </com.islamdidarmd.multistatelayout.MultiStateLayout>
 
