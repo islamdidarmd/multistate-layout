@@ -1,4 +1,4 @@
-# Multistate layout
+# Multistate Layout
 A custom layout that helps to manage multiple states(LOADING, EMPTY, CONTENT) of the layout. This layout is also aware
 about network state.
 
