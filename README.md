@@ -20,7 +20,7 @@ Now add this dependency in your module *build.gradle*
 ```
 
 ### Demo
-  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992432.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992440.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992443.png" width="250">
+  <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992432.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992440.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1552992443.png" width="250"> <img src="https://github.com/islamdidarmd/Multistate-Layout/blob/master/Screenshot_1553055451.png" width="250">
 
 ### How to use
 For using custom attributes use `msl` namespace in the root element of the layout
