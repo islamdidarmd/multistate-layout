@@ -2,7 +2,7 @@
 A custom layout that helps to manage multiple states(LOADING, EMPTY, CONTENT) of the layout. This layout is also aware
 about network state.
 
-[![](https://jitpack.io/v/islamdidarmd/Multistate-Layout.svg)](https://jitpack.io/v/islamdidarmd/multistatelayout)
+[![](https://jitpack.io/v/islamdidarmd/Multistate-Layout.svg)](https://jitpack.io/v/islamdidarmd/Multistate-Layout)
 
 ## Installation (with Gradle)
 Add the dependency to your root *build.gradle*:
